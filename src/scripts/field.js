@@ -1,7 +1,16 @@
 let growingFieldPlants = []
 
 export const addPlant = (seedObject) => {
-    growingFieldPlants.push(seedObject)
+    let arrayTest = Array.isArray(seedObject)
+
+    if (arrayTest === true) {
+        growingFieldPlants.push(seedObject[0])
+        growingFieldPlants.push(seedObject[1])
+        console.log("plants array", growingFieldPlants)
+    } else {
+        growingFieldPlants.push(seedObject)
+        console.log(seedObject, growingFieldPlants)
+    }
 }
 
 export const usePlants = () => {

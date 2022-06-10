@@ -6,26 +6,52 @@ import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { addPlant } from "./field.js"
 
+// export const plantSeeds = (PlanArray) => {
+//     let plantVar = []
+
+//     for (const plantArray of PlanArray) {
+//         for (const plant of plantArray) {
+//             // let plantVar = {}
+
+//             if (plant === "Asparagus") {
+//                 plantVar = createAsparagus()
+//             } else if (plant === "Soybean") {
+//                 plantVar = createSoybean()
+//             } else if (plant === "Sunflower") {
+//                 plantVar = createSunflower()
+//             } else if (plant === "Wheat") {
+//                 plantVar = createWheat()
+//             } else if (plant === "Potato") {
+//                 plantVar = createPotato()
+//             } else if (plant === "Corn") {
+//                 plantVar = createCorn()
+//             }
+
+//             // return addPlant(plantVar)
+//         }
+//     }
+//     return addPlant(plantVar)
+// }
+
 export const plantSeeds = (PlanArray) => {
+
     for (const plantArray of PlanArray) {
         for (const plant of plantArray) {
-            let plantVar = {}
 
             if (plant === "Asparagus") {
-                plantVar = createAsparagus()
+                addPlant(createAsparagus())
             } else if (plant === "Soybean") {
-                plantVar = createSoybean()
+                addPlant(createSoybean())
             } else if (plant === "Sunflower") {
-                plantVar = createSunflower()
+                addPlant(createSunflower())
             } else if (plant === "Wheat") {
-                plantVar = createWheat()
+                addPlant(createWheat())
             } else if (plant === "Potato") {
-                plantVar = createPotato()
+                addPlant(createPotato())
             } else if (plant === "Corn") {
-                plantVar = createCorn()
+                addPlant(createCorn())
             }
 
-            return addPlant(plantVar)
         }
     }
 }

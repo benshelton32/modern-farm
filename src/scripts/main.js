@@ -9,6 +9,7 @@ import { createWheat } from "./seeds/wheat.js"
 import { createPotato } from "./seeds/potato.js"
 import { addPlant, usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
+import { harvestPlants } from "./harvester.js"
 
 const yearlyPlan = createPlan()
 console.log(yearlyPlan)
@@ -32,9 +33,13 @@ const potatoSeed = createPotato()
 console.log(potatoSeed)
 
 let plantingPlan = plantSeeds(yearlyPlan)
-let planArray = addPlant(plantingPlan)
 let plantArray = usePlants()
-console.log(plantArray)
+
+console.log("plantArray", plantArray)
+
+let harvestArray = harvestPlants(plantArray)
+console.log(harvestArray)
+
 
 // const cornObject = {
 //         type: "corn",
