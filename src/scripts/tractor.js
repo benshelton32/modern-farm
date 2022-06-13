@@ -6,32 +6,11 @@ import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { addPlant } from "./field.js"
 
-// export const plantSeeds = (PlanArray) => {
-//     let plantVar = []
-
-//     for (const plantArray of PlanArray) {
-//         for (const plant of plantArray) {
-//             // let plantVar = {}
-
-//             if (plant === "Asparagus") {
-//                 plantVar = createAsparagus()
-//             } else if (plant === "Soybean") {
-//                 plantVar = createSoybean()
-//             } else if (plant === "Sunflower") {
-//                 plantVar = createSunflower()
-//             } else if (plant === "Wheat") {
-//                 plantVar = createWheat()
-//             } else if (plant === "Potato") {
-//                 plantVar = createPotato()
-//             } else if (plant === "Corn") {
-//                 plantVar = createCorn()
-//             }
-
-//             // return addPlant(plantVar)
-//         }
-//     }
-//     return addPlant(plantVar)
-// }
+// Export and declare function plantSeeds. Function will take an array as the parameter.
+// Use for..of loop to iterate through the array of the planting plans.
+// Use nested for..of loop to iterate through the arrays inside of the planting plan array.
+// Use if/else if statements to determine what type of plant is being selected. 
+// For each if/else is statement, if the plant matches the name on the conditional, then it should invoke the addPlant function and pass the seed creation function that corresponds to the apporpriate plant.
 
 export const plantSeeds = (PlanArray) => {
 

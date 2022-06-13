@@ -1,3 +1,7 @@
+// Export and declare function createPotato.
+// Declare variable that is equal to an object representing potato seeds.
+// Return the declared variable for the potato seeds.
+
 export const createPotato = () => {
     const potatoObject = {
         type: "Potato",
